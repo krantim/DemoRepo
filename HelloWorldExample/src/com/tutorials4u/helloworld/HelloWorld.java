@@ -18,9 +18,9 @@ public class HelloWorld extends ActionSupport{
     }
 
     public String execute() {
-    	if(0==0);{
+    	/*if(0==0);{
     		System.out.println("Wrong Code");
-    	}
+    	}*/
         setMessage("Hello " + getUserName()+".");
         return "SUCCESS";
     }

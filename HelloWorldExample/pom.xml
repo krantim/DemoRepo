@@ -8,7 +8,13 @@
 	<properties>
 		<sonar.host.url>http://localhost:9000/</sonar.host.url>
 	</properties>
+	
 	<dependencies>
+	<dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>2.44.0</version>
+            </dependency>
 		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>tools</artifactId>
@@ -21,6 +27,17 @@
 			<artifactId>xwork</artifactId>
 			<version>2.1.2</version>
 		</dependency>
+		<dependency>
+                    <groupId>com.opera</groupId>
+                    <artifactId>operadriver</artifactId>
+                    <version>1.5</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.seleniumhq.selenium</groupId>
+                            <artifactId>selenium-remote-driver</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
